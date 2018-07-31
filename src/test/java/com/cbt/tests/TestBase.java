@@ -54,7 +54,7 @@ public abstract class TestBase {
 		driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
-
+		System.out.println("Before Meth");
 	}
 
 	@AfterMethod(alwaysRun = true)
