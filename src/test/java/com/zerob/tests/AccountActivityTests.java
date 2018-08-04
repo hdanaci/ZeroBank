@@ -1,4 +1,4 @@
-package com.cbt.tests;
+package com.zerob.tests;
 
 public class AccountActivityTests {
 

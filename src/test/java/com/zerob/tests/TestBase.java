@@ -1,4 +1,4 @@
-package com.cbt.tests;
+package com.zerob.tests;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -14,9 +14,9 @@ import org.testng.annotations.BeforeTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.cbt.utilities.BrowserUtils;
-import com.cbt.utilities.ConfigurationReader;
-import com.cbt.utilities.Driver;
+import com.zerob.utilities.BrowserUtils;
+import com.zerob.utilities.ConfigurationReader;
+import com.zerob.utilities.Driver;
 
 public abstract class TestBase {
 	protected WebDriver driver;
@@ -51,7 +51,7 @@ public abstract class TestBase {
 		driver = Driver.getDriver();
 		actions = new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
+//		driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
 		System.out.println("Before Meth");
@@ -76,7 +76,7 @@ public abstract class TestBase {
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			extentLogger.skip("Test Case Skipped is " + result.getName());
 		}
-		Driver.closeDriver();
+//		Driver.closeDriver();
 	}
 
 	@AfterTest

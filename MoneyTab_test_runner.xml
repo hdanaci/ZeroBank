@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke tests" verbose="2">
+	
+	<test name="My Money Map tests">
+		
+		<classes>
+			<class name="com.zerob.login.LoginTests"></class>
+
+		</classes>
+		
+	</test>
+
+</suite>
