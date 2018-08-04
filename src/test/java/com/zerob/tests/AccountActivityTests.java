@@ -1,4 +1,4 @@
-package com.cbt.tests;
+package com.zerob.tests;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
