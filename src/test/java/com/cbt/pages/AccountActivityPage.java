@@ -14,10 +14,10 @@ public class AccountActivityPage {
 		PageFactory.initElements(driver, this);
 	}		
 	
-	@FindBy(xpath="//li[@id=\"account_activity_tab\"]")
+	@FindBy(xpath="//*[@class='active']//*[text()='Account Activity']")
 	public WebElement accountActivityTab;
 	
-	@FindBy(className="board-header")
+	@FindBy(xpath="//h2[@class='board-header']")
 	public WebElement showTransactions;
 
 	@FindBy(xpath="//option[1]")
