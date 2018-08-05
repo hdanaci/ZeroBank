@@ -2,39 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke tests" duration-ms="13042" started-at="2018-08-04T04:19:56Z" finished-at="2018-08-04T04:20:09Z">
+  <suite name="Functional test" duration-ms="11837" started-at="2018-08-05T05:52:04Z" finished-at="2018-08-05T05:52:16Z">
     <groups>
     </groups>
-    <test name="My Money Map tests" duration-ms="13042" started-at="2018-08-04T04:19:56Z" finished-at="2018-08-04T04:20:09Z">
-      <class name="com.zerob.login.LoginTests">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.zerob.login.LoginTests@91161c7]" name="setUpTest" is-config="true" duration-ms="294" started-at="2018-08-04T04:19:56Z" finished-at="2018-08-04T04:19:56Z">
+    <test name="Online Statements Page tests" duration-ms="11837" started-at="2018-08-05T05:52:04Z" finished-at="2018-08-05T05:52:16Z">
+      <class name="com.zerob.tests.OnlineStatementTest">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.zerob.tests.OnlineStatementTest@47c4ecdc]" name="setUpTest" is-config="true" duration-ms="139" started-at="2018-08-05T05:52:04Z" finished-at="2018-08-05T05:52:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zerob.login.LoginTests@91161c7]" name="setUp" is-config="true" duration-ms="11008" started-at="2018-08-04T04:19:56Z" finished-at="2018-08-04T04:20:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zerob.tests.OnlineStatementTest@47c4ecdc]" name="setUp" is-config="true" duration-ms="2646" started-at="2018-08-05T05:52:04Z" finished-at="2018-08-05T05:52:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.zerob.login.LoginTests@91161c7]" name="loginTest" duration-ms="1255" started-at="2018-08-04T04:20:07Z" finished-at="2018-08-04T04:20:08Z">
+        <test-method status="PASS" signature="onlineStatementsTest()[pri:0, instance:com.zerob.tests.OnlineStatementTest@47c4ecdc]" name="onlineStatementsTest" duration-ms="8907" started-at="2018-08-05T05:52:07Z" finished-at="2018-08-05T05:52:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zerob.login.LoginTests@91161c7]" name="tearDown" is-config="true" duration-ms="4" started-at="2018-08-04T04:20:08Z" finished-at="2018-08-04T04:20:08Z">
+        </test-method> <!-- onlineStatementsTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zerob.tests.OnlineStatementTest@47c4ecdc]" name="tearDown" is-config="true" duration-ms="120" started-at="2018-08-05T05:52:15Z" finished-at="2018-08-05T05:52:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginTests.loginTest()[pri:0, instance:com.zerob.login.LoginTests@91161c7] output={null}]]]>
+                <![CDATA[[TestResult name=onlineStatementsTest status=SUCCESS method=OnlineStatementTest.onlineStatementsTest()[pri:0, instance:com.zerob.tests.OnlineStatementTest@47c4ecdc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:com.zerob.login.LoginTests@91161c7]" name="tearDownTest" is-config="true" duration-ms="453" started-at="2018-08-04T04:20:08Z" finished-at="2018-08-04T04:20:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTest -->
-      </class> <!-- com.zerob.login.LoginTests -->
-    </test> <!-- My Money Map tests -->
-  </suite> <!-- Smoke tests -->
+      </class> <!-- com.zerob.tests.OnlineStatementTest -->
+    </test> <!-- Online Statements Page tests -->
+  </suite> <!-- Functional test -->
 </testng-results>
