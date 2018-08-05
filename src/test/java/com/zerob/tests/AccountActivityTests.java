@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.zerob.pages.AccountActivityPage;
+import com.zerob.testBase.TestBase;
 
 public class AccountActivityTests extends TestBase {
 

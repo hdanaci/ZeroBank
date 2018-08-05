@@ -1,4 +1,6 @@
 package com.zerob.pages;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,14 +10,14 @@ import com.zerob.utilities.Driver;
 
 public class AccountActivityPage {
 	
-	public AccountActivityPage() {
-		PageFactory.initElements(Driver.getDriver(), this);
+	public void AccountActivityPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}		
 	
-	@FindBy(linkText="Account Activity")
+	@FindBy(xpath="//*[@class='active']//*[text()='Account Activity']")
 	public WebElement accountActivityTab;
 	
-	@FindBy(className="board-header")
+	@FindBy(xpath="//h2[@class='board-header']")
 	public WebElement showTransactions;
 	
 	@FindBy(xpath="//select[@id='aa_accountId']")
@@ -39,5 +41,12 @@ public class AccountActivityPage {
 	@FindBy(xpath="//option[6]")
 	public WebElement brokerage;
 	
+//}
+	
+//	@FindBy(xpath="//li[@id=\"account_activity_tab\"]")
+//	public WebElement accountActivityTab;
+//	
+//	@FindBy(className="board-header")
+//	public WebElement showTransactions;
+	
 }
-

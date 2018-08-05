@@ -1,8 +1,9 @@
-package com.zerob.tests;
+package com.zerob.testBase;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
@@ -49,39 +50,49 @@ public abstract class TestBase {
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() {
 		driver = Driver.getDriver();
-		actions = new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//		driver.manage().window().fullscreen();
+		driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
-		System.out.println("Before Meth");
+
+		driver.findElement(By.id("signin_button")).click();
+		driver.findElement(By.id("user_login")).sendKeys(ConfigurationReader.getProperty("username"));
+		driver.findElement(By.id("user_password")).sendKeys(ConfigurationReader.getProperty("password"));
+		driver.findElement(By.name("submit")).click();
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		// checking if the test method failed
 		if (result.getStatus() == ITestResult.FAILURE) {
-			// get screenshot using the utility method and save the location of the screenshot
+			// get screenshot using the utility method and save the location of the
+			// screenshot
 			String screenshotLocation = BrowserUtils.getScreenshot(result.getName());
-			
+
 			// capture the name of test method
 			extentLogger.fail(result.getName());
-			
+
 			// add the screenshot to the report
 			extentLogger.addScreenCaptureFromPath(screenshotLocation);
-			
+
 			// capture the exception thrown
 			extentLogger.fail(result.getThrowable());
 
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			extentLogger.skip("Test Case Skipped is " + result.getName());
 		}
-//		Driver.closeDriver();
-	}
-
-	@AfterTest
-	public void tearDownTest() {
+		Driver.closeDriver();
 		report.flush();
 	}
+
+//	@AfterTest
+//	public void tearDownTest() {
+//		report.flush();
+//	}
+
+	// @AfterMethod
+	// public void tearDown() {
+	// driver.close();
+	// }
 
 }

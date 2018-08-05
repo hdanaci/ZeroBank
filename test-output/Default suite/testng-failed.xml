@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
@@ -16,3 +17,35 @@
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+<<<<<<< HEAD
+      <class name="com.zerob.tests.OnlineStatementTest">
+        <methods>
+          <include name="test402"/>
+          <include name="setUpTest"/>
+          <include name="setUp"/>
+          <include name="test403"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.zerob.tests.OnlineStatementTest -->
+=======
+      <class name="com.cbt.tests.AccountActivityTests">
+        <methods>
+          <include name="LogingIn"/>
+          <include name="defaultSavings"/>
+          <include name="tearDownTest"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.cbt.tests.AccountActivityTests -->
+>>>>>>> branch 'master' of https://github.com/hdanaci/ZeroBank.git
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> branch 'master' of https://github.com/hdanaci/ZeroBank.git
