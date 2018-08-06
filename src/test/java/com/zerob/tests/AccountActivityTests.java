@@ -3,157 +3,130 @@ package com.zerob.tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.By;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.zerob.pages.AccountActivityPage;
 import com.zerob.testBase.TestBase;
 
-public class AccountActivityTests extends TestBase{
-	
-	@BeforeMethod
-	public void LogingIn() {
-		driver.findElement(By.xpath("//button[@id='signin_button']")).click();
-		driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys("username");;
-		driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("password");
-		driver.findElement(By.name("submit")).click();
-		
-	}
-	
+public class AccountActivityTests extends TestBase {
+
+	AccountActivityPage accountActivityPage = new AccountActivityPage();
+
 	@Test(description = "Verify the default Account type", priority = 1)
 	public void defaultSavings() {
-		
-		AccountActivityPage accountActivityPage = new AccountActivityPage();
 
-//		driver.findElement(By.xpath("//button[@id='signin_button']")).click();
-//		driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys("username");;
-//		driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("password");
-//		driver.findElement(By.name("submit")).click();
-		
-//		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+		//TC401:defaultSavings
 		accountActivityPage.accountActivityTab.click();
-
 		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		assertTrue(accountActivityPage.chooseAccountType(1).isDisplayed());
 		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
-//		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		//TC402: Checking
+		accountActivityPage.accountActivityTab.click();
+		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		accountActivityPage.selecetAccountType.click();
+		assertTrue(accountActivityPage.chooseAccountType(2).isDisplayed());
+		accountActivityPage.chooseAccountType(2).click();
+		assertTrue(accountActivityPage.chooseAccountType(2).isDisplayed());
 		
-		driver.findElement(By.xpath("//option[1]")).click();
-//		accountActivityPage.defaultSavings.click();
+		//TC403: Savings
+		accountActivityPage.accountActivityTab.click();
+		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		accountActivityPage.selecetAccountType.click();
+		assertTrue(accountActivityPage.chooseAccountType(3).isDisplayed());
+		accountActivityPage.chooseAccountType(3).click();
+		assertTrue(accountActivityPage.chooseAccountType(3).isDisplayed());
 		
-		assertTrue(driver.findElement(By.xpath("//option[1]")).isDisplayed());
-//		assertTrue(accountActivityPage.defaultSavings.isDisplayed());
+		//TC404: Loan
+		accountActivityPage.accountActivityTab.click();
+		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		accountActivityPage.selecetAccountType.click();
+		assertTrue(accountActivityPage.chooseAccountType(4).isDisplayed());
+		accountActivityPage.chooseAccountType(4).click();
+		assertTrue(accountActivityPage.chooseAccountType(4).isDisplayed());
+		
+		//TC405: CreditCard
+		accountActivityPage.accountActivityTab.click();
+		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		accountActivityPage.selecetAccountType.click();
+		assertTrue(accountActivityPage.chooseAccountType(5).isDisplayed());
+		accountActivityPage.chooseAccountType(5).click();
+		assertTrue(accountActivityPage.chooseAccountType(5).isDisplayed());
+		
+		//TC406: Brokerage
+		accountActivityPage.accountActivityTab.click();
+		assertEquals(driver.getTitle(), "Zero - Account Activity");
+		assertTrue(accountActivityPage.showTransactions.isDisplayed());
+		accountActivityPage.selecetAccountType.click();
+		assertTrue(accountActivityPage.chooseAccountType(6).isDisplayed());
+		accountActivityPage.chooseAccountType(6).click();
+		assertTrue(accountActivityPage.chooseAccountType(6).isDisplayed());
+		
+		
+		
 	}
 	
-	@Test(description = "Verify the Checking Account type", priority = 2)
-	public void Checking() throws InterruptedException {
-		
-		AccountActivityPage accountActivityTab = new AccountActivityPage();
-		
-		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+//	@Test(description = "Verify the Checking Account type", priority = 2)
+//	public void Checking() {
+//
 //		accountActivityPage.accountActivityTab.click();
-
-		assertEquals(driver.getTitle(), "Zero - Account Activity");
-		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
+//		assertEquals(driver.getTitle(), "Zero - Account Activity");
 //		assertTrue(accountActivityPage.showTransactions.isDisplayed());
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//option[2]")).click();
-//		accountActivityPage.chechking.click();
-		Thread.sleep(2000);
-		
-		assertTrue(driver.findElement(By.xpath("//option[2]")).isDisplayed());
-//		assertTrue(accountActivityPage.checking.isDisplayed());
-	}
-	
-	@Test(description = "Verify the Savings Account type", priority = 3)
-	public void Savings() throws InterruptedException {
-		
-		AccountActivityPage accountActivityTab = new AccountActivityPage();
-		
-		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+//		accountActivityPage.selecetAccountType.click();
+//		assertTrue(accountActivityPage.chooseAccountType(2).isDisplayed());
+//		accountActivityPage.chooseAccountType(2).click();
+//		assertTrue(accountActivityPage.chooseAccountType(2).isDisplayed());
+//
+//	}
+//
+//	@Test(description = "Verify the Savings Account type", priority = 3)
+//	public void Savings() {
+//
 //		accountActivityPage.accountActivityTab.click();
-
-		assertEquals(driver.getTitle(), "Zero - Account Activity");
-		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
+//		assertEquals(driver.getTitle(), "Zero - Account Activity");
 //		assertTrue(accountActivityPage.showTransactions.isDisplayed());
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//option[3]")).click();
-//		accountActivityPage.savings.click();
-		Thread.sleep(2000);
-		
-		assertTrue(driver.findElement(By.xpath("//option[3]")).isDisplayed());
-//		assertTrue(accountActivityPage.savings.isDisplayed());
-	}
-	
-	@Test(description = "Verify the Loan Account type", priority = 4)
-	public void Loan() throws InterruptedException {
-		
-		AccountActivityPage accountActivityTab = new AccountActivityPage();
-		
-		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+//		accountActivityPage.selecetAccountType.click();
+//		assertTrue(accountActivityPage.chooseAccountType(3).isDisplayed());
+//		accountActivityPage.chooseAccountType(3).click();
+//		assertTrue(accountActivityPage.chooseAccountType(3).isDisplayed());
+//	}
+//
+//	@Test(description = "Verify the Loan Account type", priority = 4)
+//	public void Loan() {
+//
 //		accountActivityPage.accountActivityTab.click();
-
-		assertEquals(driver.getTitle(), "Zero - Account Activity");
-		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
+//		assertEquals(driver.getTitle(), "Zero - Account Activity");
 //		assertTrue(accountActivityPage.showTransactions.isDisplayed());
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//option[4]")).click();
-//		accountActivityPage.loan.click();
-		Thread.sleep(2000);
-		
-		assertTrue(driver.findElement(By.xpath("//option[4]")).isDisplayed());
-//		assertTrue(accountActivityPage.loan.isDisplayed());
-	}
-	
-	@Test(description = "Verify the Credit Card Account type", priority = 5)
-	public void CreditCard() throws InterruptedException {
-		
-		AccountActivityPage accountActivityTab = new AccountActivityPage();
-		
-		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+//		accountActivityPage.selecetAccountType.click();
+//		assertTrue(accountActivityPage.chooseAccountType(4).isDisplayed());
+//		accountActivityPage.chooseAccountType(4).click();
+//		assertTrue(accountActivityPage.chooseAccountType(4).isDisplayed());
+//	}
+//
+//	@Test(description = "Verify the Credit Card Account type", priority = 5)
+//	public void CreditCard() {
 //		accountActivityPage.accountActivityTab.click();
-
-		assertEquals(driver.getTitle(), "Zero - Account Activity");
-		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
+//		assertEquals(driver.getTitle(), "Zero - Account Activity");
 //		assertTrue(accountActivityPage.showTransactions.isDisplayed());
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//option[5]")).click();
-//		accountActivityPage.creditCard.click();
-		Thread.sleep(2000);
-		
-		assertTrue(driver.findElement(By.xpath("//option[5]")).isDisplayed());
-//		assertTrue(accountActivityPage.creditCard.isDisplayed());
-	}
-	
-	@Test(description = "Verify the Brokerage Account type", priority = 6)
-	public void Brokerage() throws InterruptedException {
-		
-		AccountActivityPage accountActivityTab = new AccountActivityPage();
-		
-		driver.findElement(By.cssSelector("#account_activity_tab > a")).click();
+//		accountActivityPage.selecetAccountType.click();
+//		assertTrue(accountActivityPage.chooseAccountType(5).isDisplayed());
+//		accountActivityPage.chooseAccountType(5).click();
+//		assertTrue(accountActivityPage.chooseAccountType(5).isDisplayed());
+//	}
+//
+//	@Test(description = "Verify the Brokerage Account type", priority = 6)
+//	public void Brokerage() {
 //		accountActivityPage.accountActivityTab.click();
-
-		assertEquals(driver.getTitle(), "Zero - Account Activity");
-		
-		assertTrue(driver.findElement(By.xpath("//h2[@class='board-header']")).isDisplayed());
+//		assertEquals(driver.getTitle(), "Zero - Account Activity");
 //		assertTrue(accountActivityPage.showTransactions.isDisplayed());
-		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//option[6]")).click();
-//		accountActivityPage.brokerage.click();
-		Thread.sleep(2000);
-		
-		assertTrue(driver.findElement(By.xpath("//option[6]")).isDisplayed());
-//		assertTrue(accountActivityPage.brokerage.isDisplayed());
-	}
-	
+//		accountActivityPage.selecetAccountType.click();
+//		assertTrue(accountActivityPage.chooseAccountType(6).isDisplayed());
+//		accountActivityPage.chooseAccountType(6).click();
+//		assertTrue(accountActivityPage.chooseAccountType(6).isDisplayed());
+//	}
+
 }
