@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Account Activity Tab Tests]">
-  <test thread-count="5" verbose="2" name="Account Activity Page tests(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.zerob.tests.AccountActivityTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="CreditCard"/>
-          <include name="Brokerage"/>
           <include name="Checking"/>
           <include name="setUpTest"/>
-          <include name="Loan"/>
-          <include name="Savings"/>
         </methods>
       </class> <!-- com.zerob.tests.AccountActivityTests -->
     </classes>
-  </test> <!-- Account Activity Page tests(failed) -->
-</suite> <!-- Failed suite [Account Activity Tab Tests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
