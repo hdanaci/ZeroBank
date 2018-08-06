@@ -47,7 +47,6 @@ public class OnlineStatementPage {
 		switch (accountType) {
 		case "Savings":
 			dropdown.selectByValue("1");
-			;
 			break;
 		case "Checking":
 			dropdown.selectByValue("2");
