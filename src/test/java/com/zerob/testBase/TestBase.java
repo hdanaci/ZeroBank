@@ -54,7 +54,7 @@ public abstract class TestBase {
 		driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
-
+		
 		driver.findElement(By.id("signin_button")).click();
 		driver.findElement(By.id("user_login")).sendKeys(ConfigurationReader.getProperty("username"));
 		driver.findElement(By.id("user_password")).sendKeys(ConfigurationReader.getProperty("password"));

@@ -6,7 +6,6 @@
       <class name="com.zerob.tests.AccountActivityTests">
         <methods>
           <include name="tearDown"/>
-          <include name="defaultSavings"/>
           <include name="setUp"/>
           <include name="CreditCard"/>
           <include name="Brokerage"/>

@@ -5,16 +5,14 @@
     <classes>
       <class name="com.zerob.tests.AccountActivityTests">
         <methods>
-          <include name="defaultSavings"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="CreditCard"/>
           <include name="Brokerage"/>
           <include name="Checking"/>
+          <include name="setUpTest"/>
           <include name="Loan"/>
           <include name="Savings"/>
-          <include name="setUpTest"/>
-          <include name="setUp"/>
-          <include name="tearDownTest"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- com.zerob.tests.AccountActivityTests -->
     </classes>
