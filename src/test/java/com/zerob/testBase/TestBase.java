@@ -25,7 +25,7 @@ public abstract class TestBase {
 	protected ExtentReports report;
 	protected ExtentHtmlReporter htmlReporter;
 	protected ExtentTest extentLogger;
-
+//deneme
 	@BeforeTest
 	public void setUpTest() {
 		// actual reporter
