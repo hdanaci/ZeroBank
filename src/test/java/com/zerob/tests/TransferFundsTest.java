@@ -15,7 +15,7 @@ public class TransferFundsTest extends TestBase{
 	
 	TransferFunds trsfunds = new TransferFunds();
 		
-	@Test(priority=1)
+	@Test(priority=1) 
 	public void transferMoney() {
 		trsfunds.TransferFundsTab.click();
 		

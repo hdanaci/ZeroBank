@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke tests" duration-ms="9514" started-at="2018-08-07T02:49:42Z" finished-at="2018-08-07T02:49:51Z">
+  <suite name="Default suite" duration-ms="6661" started-at="2018-08-07T20:17:09Z" finished-at="2018-08-07T20:17:15Z">
     <groups>
-      <group name="smoke">
-        <method signature="MyMoneyMapTest.verifyOutflow()[pri:2, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="verifyOutflow" class="com.zerob.tests.MyMoneyMapTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="smoke" duration-ms="9514" started-at="2018-08-07T02:49:42Z" finished-at="2018-08-07T02:49:51Z">
-      <class name="com.zerob.tests.MyMoneyMapTest">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="setUpTest" is-config="true" duration-ms="219" started-at="2018-08-07T02:49:42Z" finished-at="2018-08-07T02:49:42Z">
+    <test name="Default test" duration-ms="6661" started-at="2018-08-07T20:17:09Z" finished-at="2018-08-07T20:17:15Z">
+      <class name="com.zerob.tests.TransferFundsTest">
+        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="setUpTest" is-config="true" duration-ms="207" started-at="2018-08-07T20:17:09Z" finished-at="2018-08-07T20:17:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="setUp" is-config="true" duration-ms="3574" started-at="2018-08-07T02:49:42Z" finished-at="2018-08-07T02:49:46Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="setUp" is-config="true" duration-ms="3828" started-at="2018-08-07T20:17:09Z" finished-at="2018-08-07T20:17:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyInflow()[pri:1, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="verifyInflow" duration-ms="3123" started-at="2018-08-07T02:49:46Z" finished-at="2018-08-07T02:49:49Z">
+        <test-method status="PASS" signature="transferMoney()[pri:1, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="transferMoney" duration-ms="662" started-at="2018-08-07T20:17:13Z" finished-at="2018-08-07T20:17:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyInflow -->
-        <test-method status="PASS" signature="verifyOutflow()[pri:2, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="verifyOutflow" duration-ms="1367" started-at="2018-08-07T02:49:49Z" finished-at="2018-08-07T02:49:50Z">
+        </test-method> <!-- transferMoney -->
+        <test-method status="PASS" signature="AmountDescription()[pri:2, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="AmountDescription" duration-ms="681" started-at="2018-08-07T20:17:13Z" finished-at="2018-08-07T20:17:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyOutflow -->
-        <test-method status="PASS" signature="verifySummary()[pri:3, instance:com.zerob.tests.MyMoneyMapTest@4bd1f8dd]" name="verifySummary" duration-ms="1191" started-at="2018-08-07T02:49:50Z" finished-at="2018-08-07T02:49:51Z">
+        </test-method> <!-- AmountDescription -->
+        <test-method status="PASS" signature="verifyText()[pri:3, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="verifyText" duration-ms="72" started-at="2018-08-07T20:17:14Z" finished-at="2018-08-07T20:17:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySummary -->
-      </class> <!-- com.zerob.tests.MyMoneyMapTest -->
-    </test> <!-- smoke -->
-  </suite> <!-- Smoke tests -->
+        </test-method> <!-- verifyText -->
+        <test-method status="PASS" signature="transferMoney1()[pri:4, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="transferMoney1" duration-ms="559" started-at="2018-08-07T20:17:14Z" finished-at="2018-08-07T20:17:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- transferMoney1 -->
+        <test-method status="PASS" signature="AmountDescription2()[pri:5, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="AmountDescription2" duration-ms="566" started-at="2018-08-07T20:17:15Z" finished-at="2018-08-07T20:17:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmountDescription2 -->
+        <test-method status="PASS" signature="verifyText1()[pri:6, instance:com.zerob.tests.TransferFundsTest@4bd1f8dd]" name="verifyText1" duration-ms="45" started-at="2018-08-07T20:17:15Z" finished-at="2018-08-07T20:17:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyText1 -->
+      </class> <!-- com.zerob.tests.TransferFundsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

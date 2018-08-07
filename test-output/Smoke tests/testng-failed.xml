@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Smoke tests]">
+  <test thread-count="5" verbose="2" name="smoke tests(failed)">
+    <classes>
+      <class name="com.zerob.tests.TransferFundsTest">
+        <methods>
+          <include name="AmountDescription2"/>
+          <include name="transferMoney1"/>
+          <include name="verifyText"/>
+          <include name="setUpTest"/>
+          <include name="transferMoney"/>
+          <include name="setUp"/>
+          <include name="AmountDescription"/>
+          <include name="verifyText1"/>
+        </methods>
+      </class> <!-- com.zerob.tests.TransferFundsTest -->
+    </classes>
+  </test> <!-- smoke tests(failed) -->
+</suite> <!-- Failed suite [Smoke tests] -->
