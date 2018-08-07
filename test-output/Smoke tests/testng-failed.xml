@@ -8,9 +8,10 @@
           <include name="AmountDescription2"/>
           <include name="transferMoney1"/>
           <include name="verifyText"/>
+          <include name="setUp"/>
           <include name="setUpTest"/>
           <include name="transferMoney"/>
-          <include name="setUp"/>
+          <include name="tearDownTest"/>
           <include name="AmountDescription"/>
           <include name="verifyText1"/>
         </methods>

@@ -2,6 +2,7 @@ package com.zerob.tests;
 
 import static org.testng.Assert.assertEquals;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Ignore;
@@ -9,6 +10,7 @@ import org.testng.annotations.Test;
 import org.testng.reporters.jq.Main;
 
 import com.zerob.pages.TransferFunds;
+import com.zerob.testBase.TestBase;
 import com.zerob.utilities.Driver;
 
 public class TransferFundsTest extends TestBase{

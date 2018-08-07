@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import com.zerob.pages.MyMoneyMap;
+import com.zerob.testBase.TestBase;
 
 public class MyMoneyMapTest extends TestBase {
 	

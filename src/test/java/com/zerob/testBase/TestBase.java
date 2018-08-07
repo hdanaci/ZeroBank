@@ -1,6 +1,7 @@
 package com.zerob.testBase;
 
 import java.io.IOException;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,10 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-<<<<<<< HEAD:src/test/java/com/zerob/tests/TestBase.java
-=======
 import org.testng.annotations.AfterTest;
->>>>>>> 2f9f04f8b1a90466c828f0617d9ec7892ec3f2c1:src/test/java/com/zerob/testBase/TestBase.java
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
@@ -86,7 +84,6 @@ public abstract class TestBase {
 			extentLogger.skip("Test Case Skipped is " + result.getName());
 		}
 		Driver.closeDriver();
-<<<<<<< HEAD:src/test/java/com/zerob/tests/TestBase.java
 		report.flush();
 	}
 
@@ -95,9 +92,9 @@ public abstract class TestBase {
 //		report.flush();
 //	}
 
-=======
+
 //		report.flush();
-	}
+	
 
 	@AfterTest
 	public void tearDownTest() {
@@ -105,7 +102,6 @@ public abstract class TestBase {
 		report.flush();
 	}
 
->>>>>>> 2f9f04f8b1a90466c828f0617d9ec7892ec3f2c1:src/test/java/com/zerob/testBase/TestBase.java
 	// @AfterMethod
 	// public void tearDown() {
 	// driver.close();
