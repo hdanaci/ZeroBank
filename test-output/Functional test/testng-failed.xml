@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Functional test]">
+  <test thread-count="5" verbose="2" name="Login tests(failed)">
+    <classes>
+      <class name="com.zerob.tests.OnlineStatementTest_401">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="onlineStatementsTest401"/>
+          <include name="setUpTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.zerob.tests.OnlineStatementTest_401 -->
+      <class name="com.zerob.tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUpTest"/>
+          <include name="loginTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.zerob.tests.LoginTest -->
+      <class name="com.zerob.tests.OnlineStatementTest_402">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="onlineStatementsTest402"/>
+          <include name="setUpTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.zerob.tests.OnlineStatementTest_402 -->
+      <class name="com.zerob.tests.AccountActivityTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="defaultSavings"/>
+          <include name="setUp"/>
+          <include name="setUpTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.zerob.tests.AccountActivityTests -->
+    </classes>
+  </test> <!-- Login tests(failed) -->
+</suite> <!-- Failed suite [Functional test] -->

@@ -32,6 +32,7 @@ public class Driver {
 		}
 		return driver;
 	}
+	
 
 	public static void closeDriver() {
 		if (driver != null) {
@@ -39,4 +40,5 @@ public class Driver {
 			driver = null;
 		}
 	}
+	
 }

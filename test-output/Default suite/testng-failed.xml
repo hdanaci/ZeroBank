@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.zerob.tests.MyMoneyMapTest">
         <methods>
           <include name="verifyOutflow"/>
@@ -12,6 +13,16 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.zerob.tests.MyMoneyMapTest -->
+=======
+      <class name="com.zerob.tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUpTest"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.zerob.tests.LoginTest -->
+>>>>>>> 2f9f04f8b1a90466c828f0617d9ec7892ec3f2c1
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

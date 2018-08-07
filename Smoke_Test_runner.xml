@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Functional test" verbose="2">
+	
+	<test name="Smoke tests">
+		
+		<classes>
+			<class name="com.zerob.tests.LoginTest"></class>
+
+		</classes>
+		
+	</test>
+
+</suite>
