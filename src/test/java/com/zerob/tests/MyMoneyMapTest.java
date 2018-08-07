@@ -20,10 +20,8 @@ public class MyMoneyMapTest extends TestBase {
 		assertEquals(actual, expected);
 	}
 	
-	
 	@Test(priority=2 , groups = {"smoke"})
 	public void verifyOutflow() {
-		mymoneyMap.MyMoneyTab.click();
 		
 		String actual = mymoneyMap.outFlow.getText();
 		System.out.println(actual);
@@ -34,7 +32,6 @@ public class MyMoneyMapTest extends TestBase {
 	
 	@Test(priority=3)
 	public void verifySummary() {
-		mymoneyMap.MyMoneyTab.click();
 		
 		String actual = mymoneyMap.summary.getText();
 		System.out.println(actual);
