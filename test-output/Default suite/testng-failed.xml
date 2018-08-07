@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.zerob.tests.AccountActivityTests">
+      <class name="com.zerob.tests.LoginTest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="Checking"/>
           <include name="setUpTest"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.zerob.tests.AccountActivityTests -->
+      </class> <!-- com.zerob.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

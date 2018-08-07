@@ -14,7 +14,7 @@ public class OnlineStatementTest extends TestBase {
 	OnlineStatementPage onlineStatementPage = new OnlineStatementPage();
 
 	@Test
-	public void onlineStatementsTest() {
+	public void onlineStatementsTest401() {
 		/*
 		 * TC401 
 		 * Step 1 
@@ -30,13 +30,13 @@ public class OnlineStatementTest extends TestBase {
 		 * Verify Online Statement Button isDisplayed
 		 */
 		assertTrue(onlineStatementPage.onlineStatementsButton.isDisplayed());
-	
+		
 		/*
 		 * TC402 
 		 * Step 1 
 		 * Click Online Statement Button
 		 */
-		BrowserUtils.waitFor(2);
+		BrowserUtils.waitForClickablility(onlineStatementPage.onlineStatementsButton, 2);
 		onlineStatementPage.onlineStatementsButton.click();
 
 		/*
@@ -81,12 +81,14 @@ public class OnlineStatementTest extends TestBase {
 		 * Verify Online Statement Page Statements isDisplayed
 		 */
 		assertTrue(onlineStatementPage.statements.isDisplayed());
-
+		
 		/*
 		 * TC403 
 		 * Step 1 
 		 * Select Checking Account
 		 */
+		BrowserUtils.waitForClickablility(onlineStatementPage.onlineStatementsButton, 2);
+		onlineStatementPage.onlineStatementsButton.click();
 		onlineStatementPage.selectAccount("Checking");
 
 		/*
@@ -114,5 +116,6 @@ public class OnlineStatementTest extends TestBase {
 		 */
 		BrowserUtils.waitFor(2);
 		assertTrue(onlineStatementPage.statements.isDisplayed());
+	
 	}
 }

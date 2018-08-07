@@ -7,7 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
@@ -81,13 +83,14 @@ public abstract class TestBase {
 			extentLogger.skip("Test Case Skipped is " + result.getName());
 		}
 		Driver.closeDriver();
-		report.flush();
+//		report.flush();
 	}
 
-//	@AfterTest
-//	public void tearDownTest() {
-//		report.flush();
-//	}
+	@AfterTest
+	public void tearDownTest() {
+//		Driver.closeDriver();
+		report.flush();
+	}
 
 	// @AfterMethod
 	// public void tearDown() {
