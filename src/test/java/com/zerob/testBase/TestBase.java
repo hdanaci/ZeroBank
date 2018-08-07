@@ -50,7 +50,7 @@ public abstract class TestBase {
 	public void setUp() {
 		driver = Driver.getDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
+		//driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
 		
@@ -60,7 +60,7 @@ public abstract class TestBase {
 		driver.findElement(By.name("submit")).click();
 	}
 
-	@AfterMethod(alwaysRun = true)
+	//@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		// checking if the test method failed
 		if (result.getStatus() == ITestResult.FAILURE) {

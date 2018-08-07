@@ -10,7 +10,7 @@ import com.zerob.testBase.TestBase;
 import com.zerob.utilities.BrowserUtils;
 import com.zerob.utilities.Driver;
 
-public class OnlineStatementTest extends TestBase {
+public class OnlineStatementTest_401 extends TestBase {
 	OnlineStatementPage onlineStatementPage = new OnlineStatementPage();
 
 	@Test
