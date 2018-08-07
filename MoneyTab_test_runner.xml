@@ -1,23 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke tests" verbose="2">
 
- <!--  
-		<test name="smoke tests">
-		<classes>
-			<class name="com.zerob.tests.MyMoneyMapTest"></class>
-		</classes>
-		
-	</test>
-
--->
+  
 	<test name="smoke">
 		<classes>
 			<class name="com.zerob.tests.MyMoneyMapTest"></class>
+		</classes>
+	</test>
+
+
+<!-- 
+	<test name="smoke tests">
+		<classes>
 			<class name="com.zerob.tests.TransferFundsTest"></class>
-			
 		</classes>
 		
 	</test>
-
+-->
 
 </suite>
